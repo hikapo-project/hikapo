@@ -1,10 +1,10 @@
-import React, { useState, useEffect } from 'react';
-import logo from './logo.svg';
-import './App.css';
+import "./App.css";
 
-interface AppProps {}
+import React, { FC, useEffect, useState } from "react";
 
-function App({}: AppProps) {
+import logo from "./logo.svg";
+
+const App: FC = () => {
   // Create the count state.
   const [count, setCount] = useState(0);
   // Create the counter (+1 every second).
@@ -36,6 +36,6 @@ function App({}: AppProps) {
       </header>
     </div>
   );
-}
+};
 
 export default App;
