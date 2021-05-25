@@ -1,4 +1,8 @@
 {
+  "name": "hikapo-web",
+  "version": "0.0.0",
+  "homepage": "https://github.com/hikapo-project/hikapo/tree/main/src/hikapo#readme",
+  "license": "MIT",
   "scripts": {
     "start": "snowpack dev",
     "build": "snowpack build",
