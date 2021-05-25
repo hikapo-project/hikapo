@@ -1,6 +1,6 @@
 import * as React from 'react';
 import { render } from '@testing-library/react';
-import { expect } from 'chai';
+import { expect } from '@esm-bundle/chai';
 import App from './App';
 
 describe('<App>', () => {
