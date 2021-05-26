@@ -1,7 +1,6 @@
-import "./App.css";
-
 import React, { FC, useEffect, useState } from "react";
 
+import styles from "./App.module.scss";
 import logo from "./logo.svg";
 
 const App: FC = () => {
@@ -14,9 +13,9 @@ const App: FC = () => {
   }, [count, setCount]);
   // Return the App component.
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
+    <div className={styles.App}>
+      <header className={styles["App-header"]}>
+        <img src={logo} className={styles["App-logo"]} alt="logo" />
         <p>
           Edit <code>src/App.tsx</code> and save to reload.
         </p>
@@ -25,7 +24,7 @@ const App: FC = () => {
         </p>
         <p>
           <a
-            className="App-link"
+            className={styles["App-link"]}
             href="https://reactjs.org"
             target="_blank"
             rel="noopener noreferrer"
