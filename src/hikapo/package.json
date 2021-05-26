@@ -1,0 +1,93 @@
+{
+  "name": "hikapo-web",
+  "version": "0.0.0",
+  "homepage": "https://github.com/hikapo-project/hikapo/tree/main/src/hikapo#readme",
+  "license": "MIT",
+  "scripts": {
+    "start": "snowpack dev",
+    "build": "snowpack build",
+    "test": "web-test-runner \"src/**/*.test.tsx\"",
+    "lint": "eslint 'src/**/*.{ts,tsx}' --fix --max-warnings=0",
+    "lint:style": "stylelint 'src/**/*.{css,scss}'",
+    "postinstall": "node-git-hooks"
+  },
+  "eslintConfig": {
+    "root": true,
+    "parser": "@typescript-eslint/parser",
+    "plugins": [
+      "@typescript-eslint",
+      "simple-import-sort"
+    ],
+    "extends": [
+      "eslint:recommended",
+      "plugin:@typescript-eslint/recommended",
+      "plugin:prettier/recommended"
+    ],
+    "rules": {
+      "simple-import-sort/imports": "error",
+      "simple-import-sort/exports": "error"
+    },
+    "ignorePatterns": [
+      "snowpack.config.mjs",
+      "web-test-runner.config.js",
+      "build"
+    ]
+  },
+  "stylelint": {
+    "extends": [
+      "stylelint-config-sass-guidelines",
+      "stylelint-config-rational-order",
+      "stylelint-prettier/recommended"
+    ],
+    "rules": {
+      "order/properties-alphabetical-order": null
+    }
+  },
+  "node-git-hooks": {
+    "repo-path": "../../"
+  },
+  "lint-staged": {
+    "src/**/*.{ts,tsx}": [
+      "src/hikapo/node_modules/.bin/eslint --fix --max-warnings=0"
+    ],
+    "src/**/*.{css,scss}": [
+      "src/hikapo/node_modules/.bin/stylelint"
+    ]
+  },
+  "dependencies": {
+    "react": "^17.0.2",
+    "react-dom": "^17.0.2"
+  },
+  "devDependencies": {
+    "@esm-bundle/chai": "^4.3.4",
+    "@snowpack/plugin-dotenv": "^2.1.0",
+    "@snowpack/plugin-react-refresh": "^2.5.0",
+    "@snowpack/plugin-sass": "^1.4.0",
+    "@snowpack/plugin-typescript": "^1.2.1",
+    "@snowpack/web-test-runner-plugin": "^0.2.2",
+    "@testing-library/react": "^11.2.6",
+    "@types/chai": "^4.2.17",
+    "@types/mocha": "^8.2.2",
+    "@types/react": "^17.0.4",
+    "@types/react-dom": "^17.0.3",
+    "@types/snowpack-env": "^2.3.3",
+    "@typescript-eslint/eslint-plugin": "^4.25.0",
+    "@typescript-eslint/parser": "^4.25.0",
+    "@web/test-runner": "^0.13.3",
+    "eslint": "^7.27.0",
+    "eslint-config-prettier": "^8.3.0",
+    "eslint-plugin-prettier": "^3.4.0",
+    "eslint-plugin-simple-import-sort": "^7.0.0",
+    "lint-staged": "^11.0.0",
+    "node-git-hooks": "^1.0.6",
+    "prettier": "^2.2.1",
+    "snowpack": "^3.3.7",
+    "stylelint": "^13.13.1",
+    "stylelint-config-prettier": "^8.0.2",
+    "stylelint-config-rational-order": "^0.1.2",
+    "stylelint-config-sass-guidelines": "^8.0.0",
+    "stylelint-order": "^4.1.0",
+    "stylelint-prettier": "^1.2.0",
+    "typescript": "^4.2.4"
+  }
+}
