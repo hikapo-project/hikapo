@@ -8,6 +8,7 @@
     "build": "snowpack build",
     "test": "web-test-runner \"src/**/*.test.tsx\"",
     "lint": "eslint 'src/**/*.{ts,tsx}' --fix --max-warnings=0",
+    "lint:style": "stylelint 'src/**/*.{css,scss}'",
     "postinstall": "node-git-hooks"
   },
   "eslintConfig": {
@@ -32,12 +33,25 @@
       "build"
     ]
   },
+  "stylelint": {
+    "extends": [
+      "stylelint-config-sass-guidelines",
+      "stylelint-config-rational-order",
+      "stylelint-prettier/recommended"
+    ],
+    "rules": {
+      "order/properties-alphabetical-order": null
+    }
+  },
   "node-git-hooks": {
     "repo-path": "../../"
   },
   "lint-staged": {
     "src/**/*.{ts,tsx}": [
       "src/hikapo/node_modules/.bin/eslint --fix --max-warnings=0"
+    ],
+    "src/**/*.{css,scss}": [
+      "src/hikapo/node_modules/.bin/stylelint"
     ]
   },
   "dependencies": {
@@ -68,6 +82,12 @@
     "node-git-hooks": "^1.0.6",
     "prettier": "^2.2.1",
     "snowpack": "^3.3.7",
+    "stylelint": "^13.13.1",
+    "stylelint-config-prettier": "^8.0.2",
+    "stylelint-config-rational-order": "^0.1.2",
+    "stylelint-config-sass-guidelines": "^8.0.0",
+    "stylelint-order": "^4.1.0",
+    "stylelint-prettier": "^1.2.0",
     "typescript": "^4.2.4"
   }
 }
