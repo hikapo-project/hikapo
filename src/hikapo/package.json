@@ -28,7 +28,8 @@
     },
     "ignorePatterns": [
       "snowpack.config.mjs",
-      "web-test-runner.config.js"
+      "web-test-runner.config.js",
+      "build"
     ]
   },
   "node-git-hooks": {
