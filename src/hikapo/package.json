@@ -36,11 +36,8 @@
     "repo-path": "../../"
   },
   "lint-staged": {
-    "src/**/*.tsx": [
-      "eslint --fix --max-warnings=0"
-    ],
-    "src/**/*.ts": [
-      "eslint --fix --max-warnings=0"
+    "src/**/*.{ts,tsx}": [
+      "src/hikapo/node_modules/.bin/eslint --fix --max-warnings=0"
     ]
   },
   "dependencies": {
