@@ -24,6 +24,6 @@ export default {
     /* ... */
   },
   buildOptions: {
-    /* ... */
+    cacheDirPath: "./.yarn/snowpack"
   },
 };
