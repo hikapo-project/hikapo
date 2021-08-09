@@ -8,7 +8,7 @@
     "build": "snowpack build",
     "test": "web-test-runner \"src/**/*.test.tsx\"",
     "lint": "eslint 'src/**/*.{ts,tsx}' --fix --max-warnings=0",
-    "lint:style": "stylelint 'src/**/*.{css,scss}'",
+    "lint:style": "stylelint 'src/**/*.css'",
     "postinstall": "node-git-hooks"
   },
   "eslintConfig": {
@@ -35,7 +35,7 @@
   },
   "stylelint": {
     "extends": [
-      "stylelint-config-sass-guidelines",
+      "stylelint-config-standard",
       "stylelint-config-rational-order",
       "stylelint-prettier/recommended"
     ],
@@ -50,7 +50,7 @@
     "src/**/*.{ts,tsx}": [
       "src/hikapo/node_modules/.bin/eslint --fix --max-warnings=0"
     ],
-    "src/**/*.{css,scss}": [
+    "src/**/*.css": [
       "src/hikapo/node_modules/.bin/stylelint"
     ]
   },
