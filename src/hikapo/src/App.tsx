@@ -1,6 +1,6 @@
 import React, { FC, useEffect, useState } from "react";
 
-import styles from "./App.module.scss";
+import styles from "./App.module.css";
 import logo from "./logo.svg";
 
 const App: FC = () => {
