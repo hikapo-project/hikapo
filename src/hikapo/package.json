@@ -48,10 +48,10 @@
   },
   "lint-staged": {
     "src/**/*.{ts,tsx}": [
-      "src/hikapo/node_modules/.bin/eslint --fix --max-warnings=0"
+      "yarn eslint --fix --max-warnings=0"
     ],
     "src/**/*.css": [
-      "src/hikapo/node_modules/.bin/stylelint"
+      "yarn stylelint"
     ]
   },
   "dependencies": {

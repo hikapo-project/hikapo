@@ -1,2 +1,2 @@
 #!/bin/sh
-src/hikapo/node_modules/.bin/lint-staged  --config src/hikapo/package.json
+yarn lint-staged
